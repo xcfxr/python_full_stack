@@ -2,7 +2,6 @@ name = " aleX"
 print(name.strip())
 print(name.startswith('al'))
 print(name.endswith('X'))
-print(name.endswith('X'))
 print(name.replace('l', 'p'))
 print(name.split('l'))
 print(name.upper())
