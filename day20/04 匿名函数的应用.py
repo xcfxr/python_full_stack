@@ -56,16 +56,16 @@ res=sorted(salaries,key=lambda k:salaries[k],reverse=True)
 # print(res)
 
 # ========================map的应用(了解)
-# l=['alex','lxx','wxx','薛贤妻']
+l=['alex','lxx','wxx','薛贤妻']
 # new_l=(name+'_dsb' for name in l)
 # print(new_l)
 
 # res=map(lambda name:name+'_dsb',l)
 # print(res) # 生成器
 # ========================filter的应用（了解）
-# l=['alex_sb','lxx_sb','wxx','薛贤妻']
-# res=(name for name in l if name.endswith('sb'))
-# print(res)
+l=['alex_sb','lxx_sb','wxx','薛贤妻']
+res=(name for name in l if name.endswith('sb'))
+print(list(res))
 
 # res=filter(lambda name:name.endswith('sb'),l)
 # print(res)
