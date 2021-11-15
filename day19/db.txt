@@ -1,0 +1,4 @@
+egon male 98 3000
+alex female 78 30000
+wupeiqi female 68 20000
+yuanhao female 88 10000
