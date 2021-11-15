@@ -8,7 +8,7 @@ import logging
 
 logging.basicConfig(
     # 1、日志输出位置：1、终端 2、文件
-    filename='access.log', # 不指定，默认打印到终端
+    #filename='access.log', # 不指定，默认打印到终端
 
     # 2、日志格式
     format='%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s',

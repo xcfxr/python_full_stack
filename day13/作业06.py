@@ -1,4 +1,6 @@
 import os
+from functools import wraps
+
 
 
 def to_order(usr, order_of_usr):
@@ -8,7 +10,7 @@ def to_order(usr, order_of_usr):
         order[order_of_usr]()
 
 
-
+@deco
 def recharge():
     for line in f1:
         if line.split()[0] == usr:
@@ -22,6 +24,7 @@ def recharge():
         f2.write(line)
 
 
+@deco
 def withdraw():
     for line in f1:
         if line.split()[0] == usr:
@@ -34,7 +37,7 @@ def withdraw():
             line += '\n'
         f2.write(line)
 
-
+@deco
 def query():
     for line in f1:
         if line.split()[0] == usr:
@@ -43,6 +46,7 @@ def query():
             break
 
 
+@deco
 def transfer():
     target = input('usr====>')
     amount = input('amount==>')
@@ -58,9 +62,7 @@ def transfer():
         f2.write('\n')
 
 
-order = {'0': 'quit', '1': recharge, '2': withdraw, '3': transfer, '4': query}
-
-
+@deco
 def login():
     usr_ipt = input('username===>').strip()
     pwd_ipt = input('password===>').strip()
@@ -94,4 +96,5 @@ def login():
 
 if __name__ == '__main__':
     usr = None
+    #print(order)
     login()

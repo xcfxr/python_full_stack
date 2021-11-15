@@ -4,10 +4,10 @@ import os
 def to_order(usr, order_of_usr):
     global f1, f2
     with open('db.txt', 'r', encoding='utf-8') as f1, \
-            open('.db.txt', 'w', encoding='utf-8') as f2:
+            open('db.txt', 'w', encoding='utf-8') as f2:
         order[order_of_usr]()
     os.remove('db.txt')
-    os.rename('.db.txt', 'db.txt')
+    os.rename('db.txt', 'db.txt')
 
 
 

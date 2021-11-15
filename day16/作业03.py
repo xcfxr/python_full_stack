@@ -1,3 +1,27 @@
+from functools import wraps
+order_dict = {'0': 'break'}
+init_order = {'0': 'break'}
+
+
+def init(func):
+    init_order[str(len(init_order))] = func
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+def order(func):
+    order_dict[str(len(order_dict))] = func
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+
 def load_data():
     with open('db.txt', 'rt', encoding='utf-8') as f:
         for line in f:
@@ -5,6 +29,7 @@ def load_data():
             user_info[usr] = [pwd, int(balance), int(locked)]
 
 
+@init
 def register():
     while True:
         usr = input('请输入用户名：').strip()
@@ -25,6 +50,7 @@ def register():
             print('两次密码输入不一致，请重新输入！')
 
 
+@init
 def login():
     count = 3
     while True:
@@ -70,6 +96,7 @@ def login():
                     break
 
 
+@order
 def transfer():
     target = input('请输入汇款对象：').strip()
     if target not in user_info:
@@ -89,6 +116,7 @@ def transfer():
             print('金额必须为数字， 汇款失败')
 
 
+@order
 def withdraw():
     amount = input('请输入取钱金额：').strip()
     if amount.isdigit():
@@ -113,10 +141,12 @@ def rewrite():
             f.write('\n')
 
 
+@order
 def query():
     print('当前余额为%d' % user_info[user][1])
 
 
+@order
 def recharge():
     amount = input('请输入充值金额：').strip()
     if amount.isdigit():
@@ -128,21 +158,20 @@ def recharge():
         print('金额必须为数字， 充值失败')
 
 
-order_dict = {'0': 'break', '1': transfer, '2': withdraw, '3': query, '4': recharge}
-init_order = {'0': 'break', '1':login, '2':register}
-user_info = {}
-load_data()
-user = None
-while True:
-    for k,v in init_order.items():
-        if k != '0':
-            print(k, v.__name__)
+if __name__ == '__main__':
+    user_info = {}
+    load_data()
+    user = None
+    while True:
+        for k,v in init_order.items():
+            if k != '0':
+                print(k, v.__name__)
+            else:
+                print(k, v)
+        order = input('请输入指令：')
+        if order == '0':
+            break
+        if order in '12':
+            init_order[order]()
         else:
-            print(k, v)
-    order = input('请输入指令：')
-    if order == '0':
-        break
-    if order in '12':
-        init_order[order]()
-    else:
-        print('请输入规范指令')
+            print('请输入规范指令')

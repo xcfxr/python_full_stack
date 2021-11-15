@@ -31,4 +31,4 @@ def deco3(func):
 def index():
     pass
 
-index()
+#index()

@@ -1,5 +1,3 @@
-2020-04-01 11:04:29,688 - MainThread:140736945378240 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
-2020-04-01 11:04:29,865 - MainThread:140736945378240 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
-2020-04-01 11:04:30,094 - MainThread:140736945378240 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
-2020-04-01 11:04:30,239 - MainThread:140736945378240 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
-2020-04-01 11:04:31,740 - MainThread:140736945378240 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
+2021-11-15 15:46:06,539 - MainThread:21176 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
+2021-11-15 15:46:06,973 - MainThread:3036 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
+2021-11-15 15:46:07,629 - MainThread:10832 - 日志名字:用户常规 - src.py:33 -INFO - logger4产生的info日志
