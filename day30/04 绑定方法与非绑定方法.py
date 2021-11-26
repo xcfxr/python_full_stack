@@ -48,11 +48,11 @@ class Mysql:
         pass
 obj1=Mysql('1.1.1.1',3306)
 
-# print(Mysql.create_id)
-# print(obj1.create_id)
+print(Mysql.create_id)
+print(obj1.create_id)
 
-# Mysql.create_id(1,2,3)
-# obj1.create_id(4,5,6)
+#Mysql.create_id(1,2,3)
+#obj1.create_id(4,5,6)
 
 print(Mysql.create_id)
 print(Mysql.f1)

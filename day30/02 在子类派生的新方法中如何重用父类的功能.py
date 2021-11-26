@@ -78,7 +78,7 @@ class A:
         super().test1()
 
 class B:
-    def test(self):
+    def test1(self):
         print('from B')
 
 class C(A,B):
