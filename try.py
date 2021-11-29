@@ -1,19 +1,22 @@
-z = 7  # 定义全局变量
+class Course():
+    def __init__(self, name, period, price):
+        self.name = name
+        self.period = period
+        self.__price = price
 
+    def tell_course(self):
+        print(f"课程{self.name}周期为{self.period}，价格为{self.__price}")
 
-def foo(arg):
-    x = 1
-    print(locals())
-    print('x=', x)
-    locals()['x'] = 2  # 修改的是局部名字空间的拷贝，而实际的局部名字空间中的变量值并无影响。
-    print(locals())
-    print("x=", x)
+    def get_price(self):
+        return self.__price
 
+    def set_price(self, val):
+        self.__price = val
 
-foo(3)
-print(globals())
-print('z=', z)
-globals()["z"] = 8  # globals（）返回的是实际的全局名字空间，修改变量z的值
-print(globals())
-print("z=", z)
-print(locals())
+    def del_price(self):
+        del self.__price
+
+    price = property(get_price, set_price, del_price)
+course_obj1 = Course('python全栈开发', '6mons', 20000)
+course_obj1.price
+
