@@ -1,2 +1,2 @@
 ﻿# python_full_stack
-# OldBoy homework
+# OldBoy notes and homework
