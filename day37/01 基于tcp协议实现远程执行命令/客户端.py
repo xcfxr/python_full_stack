@@ -18,7 +18,7 @@ while True:
     # 2、recv_size=0,循环接收，每接收一次，recv_size+=接收的长度
     # 3、直到recv_size=total_size，结束循环
     cmd_res=client.recv(1024) # 本次接收，最大接收1024Bytes
-    print(cmd_res.decode('utf-8')) # 强调：windows系统用gbk
+    print(cmd_res.decode('gbk')) # 强调：windows系统用gbk
 
 
 # 粘包问题出现的原因
