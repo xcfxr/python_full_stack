@@ -1,5 +1,5 @@
 import time
-
+'https://www.cnblogs.com/Dominic-Ji/articles/10929381.html'
 
 def func():
     time.sleep(3)
