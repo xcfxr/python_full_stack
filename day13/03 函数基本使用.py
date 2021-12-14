@@ -127,11 +127,11 @@ def func(x, y):
 #     pass
 #
 # def download_file():
-#     """download file function"""
+#     """client_download file function"""
 #     pass
 #
 # def upload_file():
-#     """upload file function"""
+#     """client_upload file function"""
 #     pass
 #
 # def ls():

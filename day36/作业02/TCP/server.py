@@ -6,7 +6,7 @@ while True:
     conn, client_addr = server.accept()
     while True:
         try:
-            data = conn.recv(1024)
+            data = conn.recv(10)
             if len(data) == 0:
                 break
             print(data.decode('utf-8'))

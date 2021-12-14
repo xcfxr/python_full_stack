@@ -26,7 +26,7 @@ while True:
     while recv_size < total_size:
         recv_data=client.recv(1024)
         recv_size+=len(recv_data)
-        print(recv_data.decode('utf-8'),end='')
+        print(recv_data.decode('gbk'),end='')
     else:
         print()
 

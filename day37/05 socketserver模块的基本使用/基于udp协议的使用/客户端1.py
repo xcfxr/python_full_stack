@@ -4,7 +4,7 @@ client=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # 流式协议=》tcp协�
 
 while True:
     msg=input('>>>: ').strip()
-    client.sendto(msg.encode('utf-8'),('115.29.65.16',8888))
+    client.sendto(msg.encode('utf-8'),('121.40.50.61',8080))
     res=client.recvfrom(1024)
     print(res)
 
