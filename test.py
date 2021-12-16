@@ -12,8 +12,8 @@ def copy_file(s, t):
             os.makedirs(os.path.join(t, each), exist_ok=True)
             copy_file(os.path.join(s, each), os.path.join(t, each))
 
-for day in range(36, 42):
+for day in range(42, 43):
     os.makedirs('day%d'%day, exist_ok=True)
-    copy_file('D:/BaiduNetdiskDownload/04阶段高并发 线程池进程协程通信协议/day%d/代码'%day, 'day%d'%day)
+    copy_file('D:/BaiduNetdiskDownload/04阶段高并发 线程池进程协程通信协议/day%d/代码/day%d'%(day, day), 'day%d'%day)
 
 
