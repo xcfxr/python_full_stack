@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*后代选择器*/
+        /*div span {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*儿子选择器*/
+        /*div>span {*/
+        /*    color: red;*/
+        /*}*/
+
+        /*毗邻选择器*/
+        /*div+span {  !*同级别紧挨着的下面的第一个*!*/
+        /*    color: aqua;*/
+        /*}*/
+
+        /*弟弟选择器*/
+        div~span {  /*同级别下面所有的span*/
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span>span1</span>
+    <span>span2</span>
+    <div>div
+        <p>div p</p>
+        <p>div p
+            <span>div p span</span>
+        </p>
+        <span>span</span>
+        <span>span</span>
+    </div>
+    <span>span</span>
+    <span>span</span>
+    <p>ppp</p>
+    <span>span</span>
+</body>
+</html>

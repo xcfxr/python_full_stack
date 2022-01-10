@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<input type="text" id="d1"> +
+<input type="text" id="d2"> =
+<input type="text" id="d3">
+<p>
+    <button id="btn">点我</button>
+</p>
+
+<script>
+    // 先给按钮绑定一个点击事件
+    $('#btn').click(function () {
+        // 朝后端发送ajax请求
+        $.ajax({
+            // 1.指定朝哪个后端发送ajax请求
+            url:'', // 不写就是朝当前地址提交
+            // 2.请求方式
+            type:'post',  // 不指定默认就是get 都是小写
+            // 3.数据
+            {#data:{'username':'jason','password':123},#}
+            data:{'i1':$('#d1').val(),'i2':$('#d2').val()},
+            // 4.回调函数:当后端给你返回结果的时候会自动触发 args接受后端的返回结果
+            success:function (args) {
+                {#alert(args)  // 通过DOM操作动态渲染到第三个input里面#}
+                {#$('#d3').val(args)#}
+                console.log(typeof args)
+
+            }
+        })
+    })
+</script>
+</body>
+</html>
