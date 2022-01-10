@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /*
+            1.选择器相同 书写顺序不同
+                就近原则:谁离标签更近就听谁的
+            2.选择器不同 ...
+                行内 > id选择器  > 类选择器 > 标签选择器
+                精确度越高越有效
+        */
+        #d1 {
+            color: aqua;
+        }
+        /*.c1 {*/
+        /*    color: orange;*/
+        /*}*/
+        /*p {*/
+        /*    color: red;*/
+        /*}*/
+    </style>
+<!--    <link rel="stylesheet" href="mycss1.css">-->
+</head>
+<body>
+    <p id="d1" class="c1" style="color: blue">贤妻果然很识趣，有前途~</p>
+</body>
+</html>

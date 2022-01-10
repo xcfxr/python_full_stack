@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: black;
+        }
+        a:link {  /*访问之前的状态*/
+            color: red;
+        }
+        a:hover {  /*需要记住*/
+            color: aqua;  /*鼠标悬浮态*/
+        }
+        a:active {
+            color: black;  /*鼠标点击不松开的状态  激活态*/
+        }
+        a:visited {
+            color: darkgray;  /*访问之后的状态*/
+        }
+        p {
+            color: darkgray;
+            font-size: 48px;
+        }
+        p:hover {
+            color: white;
+        }
+        
+        input:focus {  /*input框获取焦点(鼠标点了input框)*/
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<a href="https://www.jd.com/">小轩在不在?</a>
+<p>点我有你好看哦</p>
+<input type="text">
+</body>
+</html>

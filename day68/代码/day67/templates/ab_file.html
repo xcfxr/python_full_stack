@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p>username:<input type="text" id="d1"></p>
+<p>password:<input type="text" id="d2"></p>
+<p><input type="file" id="d3"></p>
+<button class="btn btn-info" id="d4">点我</button>
+
+<script>
+    // 点击按钮朝后端发送普通键值对和文件数据
+    $('#d4').on('click',function () {
+        // 1 需要先利用FormData内置对象
+        let formDateObj = new FormData();
+        // 2 添加普通的键值对
+        formDateObj.append('username',$('#d1').val());
+        formDateObj.append('password',$('#d2').val());
+        // 3 添加文件对象
+        formDateObj.append('myfile',$('#d3')[0].files[0])
+        // 4 将对象基于ajax发送给后端
+        $.ajax({
+            url:'',
+            type:'post',
+            data:formDateObj,  // 直接将对象放在data后面即可
+
+            // ajax发送文件必须要指定的两个参数
+            contentType:false,  // 不需使用任何编码 django后端能够自动识别formdata对象
+            processData:false,  // 告诉你的浏览器不要对你的数据进行任何处理
+
+            success:function (args) {
+            }
+        })
+
+
+    })
+</script>
+</body>
+</html>
