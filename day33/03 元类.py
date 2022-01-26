@@ -49,7 +49,7 @@
 #     print('%s:%s' %(self.name,self.name))
 # """
 # exec(class_body,{},class_dic)
-# # print(class_dic)
+# print(class_dic)
 #
 # # 4、调用元类
 # People=type(class_name,class_bases,class_dic)

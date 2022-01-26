@@ -1,4 +1,4 @@
-import simplejson
-obj = {'abc':123}
-with open('./test.json', 'w') as fp:
-    simplejson.dump(obj, fp)
+n = 10
+for n in range(5):
+  print(n)
+print(n)  
